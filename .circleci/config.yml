@@ -18,6 +18,7 @@ jobs:
       - run: apk add file
       - run: wget https://ziglang.org/download/0.7.0/zig-linux-x86_64-0.7.0.tar.xz
       - run: tar -vxf zig-linux-x86_64-0.7.0.tar.xz
+      - run: ls ./zig-linux-x86_64-0.7.0
       - run: ln -s ./zig-linux-x86_64-0.7.0/zig /bin
       - run: file /bin/zig
       - run: zig version

@@ -17,6 +17,5 @@ jobs:
       - run: ./download_zig.sh 0.7.0
       - run: zig version
       - run: zig env
-      - run: zig targets
       - run: zig build
       - run: ./zig-cache/bin/circleci-testing

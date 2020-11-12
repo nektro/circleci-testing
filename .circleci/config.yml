@@ -5,7 +5,7 @@ jobs:
   build:
     working_directory: /home/circleci/circleci-testing
     docker:
-      - image: alpine:3.12
+      - image: alpine:edge
     steps:
       - checkout
 

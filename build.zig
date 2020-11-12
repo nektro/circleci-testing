@@ -6,7 +6,14 @@ pub fn build(b: *Builder) void {
 
     const mode = b.standardReleaseOptions();
 
-    const exe = b.addExecutable("circleci-testing", "src/main.zig");
+    const exe = b.addExecutable(
+        b.fmt("{}-{}-{}", .{
+            "circleci-testing",
+            @tagName(target.os_tag orelse unreachable),
+            @tagName(target.cpu_arch orelse unreachable),
+        }),
+        "src/main.zig",
+    );
     exe.setTarget(target);
     exe.setBuildMode(mode);
     exe.install();

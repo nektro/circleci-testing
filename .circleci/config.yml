@@ -11,12 +11,6 @@ jobs:
       - run: apk add git
       - checkout
 
-      - run: apk add go
-      - run: go version
-      - run: go env
-      - run: go build
-      - run: ./circleci-testing
-
       # - run: echo 'https://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
       # - run: apk update
       # - run: apk add zig

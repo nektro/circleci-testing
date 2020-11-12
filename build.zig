@@ -16,6 +16,7 @@ pub fn build(b: *Builder) void {
     );
     exe.setTarget(target);
     exe.setBuildMode(mode);
+    exe.strip = true;
     exe.install();
 
     const run_cmd = exe.run();

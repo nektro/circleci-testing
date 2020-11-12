@@ -8,7 +8,7 @@ arch="x86_64"
 version="$1"
 
 dir="zig-$os-$arch-$version"
-file="$file.tar.xz"
+file="$dir.tar.xz"
 
 cd ~
 apk add wget tar

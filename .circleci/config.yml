@@ -5,10 +5,11 @@ jobs:
   build:
     working_directory: /home/circleci/circleci-testing
     docker:
-      - image: circleci/golang:1.14
+      - image: alpine:3.12
     steps:
       - checkout
 
+      - run: apk add go
       - run: go version
       - run: go env
       - run: go build

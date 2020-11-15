@@ -25,6 +25,7 @@ jobs:
           path: ./zig-cache/bin/
           destination: /artifacts/
 
+      - run: ls -l /artifacts/
       - run: apk add go
       - run: ls -l /artifacts/
       - run: ./make_release.sh

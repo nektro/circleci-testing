@@ -6,6 +6,8 @@ jobs:
     working_directory: /home/circleci/circleci-testing
     docker:
       - image: alpine:edge
+    environment:
+      GOPATH: /usr/lib/go
     steps:
       - run: apk update
       - run: apk add git
@@ -22,3 +24,6 @@ jobs:
       - store_artifacts:
           path: ./zig-cache/bin/
           destination: /artifacts/
+
+      - run: apk add go
+      - run: ./make_release.sh

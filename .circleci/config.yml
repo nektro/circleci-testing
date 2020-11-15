@@ -26,4 +26,5 @@ jobs:
           destination: /artifacts/
 
       - run: apk add go
+      - run: ls -l /artifacts/
       - run: ./make_release.sh

@@ -7,7 +7,7 @@ jobs:
     docker:
       - image: alpine:edge
     environment:
-      GOPATH: /usr/lib/go
+      GOPATH: /home/circleci/go
     steps:
       - run: apk update
       - run: apk add git

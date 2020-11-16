@@ -10,7 +10,7 @@ version="$1"
 dir="zig-$os-$arch-$version"
 file="$dir.tar.xz"
 
-cd /
+cd ~
 wget https://ziglang.org/download/$version/$file
 tar -vxf $file
-ln -s /$dir/zig /bin
+ln -s ~/$dir/zig /bin

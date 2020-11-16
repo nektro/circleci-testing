@@ -5,8 +5,7 @@ jobs:
   build:
     working_directory: /home/circleci/circleci-testing
     docker:
-      - image: circleci/golang
-        user: root
+      - image: golang
     steps:
       - checkout
 

@@ -5,12 +5,8 @@ jobs:
   build:
     working_directory: /home/circleci/circleci-testing
     docker:
-      - image: alpine:edge
-    environment:
-      GOPATH: /home/circleci/go
+      - image: circleci:golang
     steps:
-      - run: apk update
-      - run: apk add git
       - checkout
 
       # - run: echo 'https://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
@@ -19,13 +15,9 @@ jobs:
       - run: ./download_zig.sh 0.7.0
       - run: zig version
       - run: zig env
-      - run: apk add jq grep
       - run: ./build_all.sh
       - store_artifacts:
           path: ./zig-cache/bin/
           destination: /artifacts/
 
-      - run: ls -l /artifacts/
-      - run: apk add go
-      - run: ls -l /artifacts/
       - run: ./make_release.sh

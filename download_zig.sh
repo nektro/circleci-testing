@@ -3,8 +3,6 @@
 set -x
 set -e
 
-sudo su
-
 os="linux"
 arch="x86_64"
 version="$1"

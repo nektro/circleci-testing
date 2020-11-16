@@ -10,13 +10,13 @@ jobs:
       DEBIAN_FRONTEND: noninteractive
     steps:
       - run: apt update
-      - run: apt upgrade
+      - run: apt -y upgrade
       - checkout
 
       # - run: echo 'https://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
       # - run: apk update
       # - run: apk add zig
-      - run: apt install xz-utils
+      - run: apt -y install xz-utils
       - run: ./download_zig.sh 0.7.0
       - run: zig version
       - run: zig env

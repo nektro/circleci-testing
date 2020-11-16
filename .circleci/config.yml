@@ -25,4 +25,5 @@ jobs:
           path: ./zig-cache/bin/
           destination: /artifacts/
 
+      - run: ls -l /
       - run: ./make_release.sh

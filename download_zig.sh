@@ -13,4 +13,4 @@ file="$dir.tar.xz"
 cd ~
 wget https://ziglang.org/download/$version/$file
 tar -vxf $file
-ln -s ~/$dir/zig /bin
+ln -s ~/$dir/zig ~/.local/bin

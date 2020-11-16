@@ -6,6 +6,8 @@ jobs:
     working_directory: /home/circleci/circleci-testing
     docker:
       - image: golang
+    environment:
+      DEBIAN_FRONTEND: noninteractive
     steps:
       - run: apt update
       - run: apt upgrade

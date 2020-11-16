@@ -7,6 +7,8 @@ jobs:
     docker:
       - image: golang
     steps:
+      - run: apt update
+      - run: apt upgrade
       - checkout
 
       # - run: echo 'https://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
